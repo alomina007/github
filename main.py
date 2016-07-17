@@ -13,7 +13,7 @@ bot = telebot.TeleBot('181569628:AAExwiEQLk4SJ2fVM3u10veOaxJa3OcToZ8') # makan t
 def m(m):
     markup = types.InlineKeyboardMarkup()
     markup.add(types.InlineKeyboardButton('developer', url = 'https://telegram.me/XxattackerxX'))
-    bot.send_message(m.chat.id, 'hi\ncommands : \n/git [username]', reply_markup=markup)
+    bot.send_message(m.chat.id, 'hi welcome\ncommands : \n/git [username]\n_____________________\developer:\n@XxattackerxX', reply_markup=markup)
     print 'bot send help command'
 
 @bot.message_handler(regexp='^(/git) (.*)')
