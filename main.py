@@ -12,7 +12,7 @@ bot = telebot.TeleBot('181569628:AAExwiEQLk4SJ2fVM3u10veOaxJa3OcToZ8') # makan t
 @bot.message_handler(commands=['start', 'help'])
 def m(m):
     markup = types.InlineKeyboardMarkup()
-    markup.add(types.InlineKeyboardButton('developer == https://telegram.me/XxattackerxX'))
+    markup.add(types.InlineKeyboardButton('developer', url = 'https://telegram.me/XxattackerxX'))
     bot.send_message(m.chat.id, 'Hi Welcome Github bot\ncommands : \n/git [username]\n\ncreated By Taylor Team \ndeveloper : @negative_officiall', reply_markup=markup)
     print 'bot send help command'
 
