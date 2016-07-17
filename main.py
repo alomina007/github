@@ -13,7 +13,7 @@ bot = telebot.TeleBot('181569628:AAExwiEQLk4SJ2fVM3u10veOaxJa3OcToZ8') # makan t
 def m(m):
     markup = types.InlineKeyboardMarkup()
     markup.add(types.InlineKeyboardButton('developer', url = 'https://telegram.me/XxattackerxX'))
-    bot.send_message(m.chat.id, 'hi welcome\ncommands : \n/git [username]\n_____________________\developer:\n@XxattackerxX', reply_markup=markup)
+    bot.send_message(m.chat.id, 'hi welcome\ncommands : \n/git [username]\n_________________________________\ndeveloper:\n@XxattackerxX', reply_markup=markup)
     print 'bot send help command'
 
 @bot.message_handler(regexp='^(/git) (.*)')
@@ -35,7 +35,7 @@ def gif(m):
         avatar_url = json_data['avatar_url']
         urllib.urlretrieve("{}".format(avatar_url), "git.png")
         bot.send_sticker(m.chat.id, open('git.png'))
-        bot.send_message(m.chat.id, 'Name : <b>{}</b>\nType : <b>{}</b>\nCompany : <b>{}</b>\nblog : <code>{}</code>\nlocation : <b>{}</b>\nbio : <i>{}</i>\n\nUrl : <code>{}</code>\nfollowers : <code>{}</code>\nfollowing : <code>{}</code>\nRepos : <code>{}</code>\n\xE2\x97\xBC \xE2\x97\xBB \xE2\x97\xBC \xE2\x97\xBB \xE2\x97\xBC \xE2\x97\xBB \xE2\x97\xBC \n@powercelteam'.format(name,typee,company,blog,location,bio,url_html,followers,following,public_repos), parse_mode='HTML')
+        bot.send_message(m.chat.id, 'Name : <b>{}</b>\nType : <b>{}</b>\nCompany : <b>{}</b>\nblog : <code>{}</code>\nlocation : <b>{}</b>\nbio : <i>{}</i>\n\nUrl : <code>{}</code>\nfollowers : <code>{}</code>\nfollowing : <code>{}</code>\nRepos : <code>{}</code>\n\________________ \n@powercelteam'.format(name,typee,company,blog,location,bio,url_html,followers,following,public_repos), parse_mode='HTML')
         print 'bot send git command'
     if 'message' in json_data:
         bot.send_message(m.chat.id, 'Error \n/git [username]')
