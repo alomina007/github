@@ -12,7 +12,6 @@ bot = telebot.TeleBot('181569628:AAExwiEQLk4SJ2fVM3u10veOaxJa3OcToZ8') # makan t
 @bot.message_handler(commands=['start', 'help'])
 def m(m):
     markup = types.InlineKeyboardMarkup()
-    markup.add(types.InlineKeyboardButton('Inline Mode', switch_inline_query='Github_Ro_Bot'))
     bot.send_message(m.chat.id, 'سلام خوش آمدید\ncommands : \n/git [username]', reply_markup=markup)
     print 'bot send help command'
 
