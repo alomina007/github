@@ -13,7 +13,6 @@ bot = telebot.TeleBot('181569628:AAExwiEQLk4SJ2fVM3u10veOaxJa3OcToZ8') # makan t
 def m(m):
     markup = types.InlineKeyboardMarkup()
     markup.add(types.InlineKeyboardButton('developer', url = 'https://telegram.me/XxattackerxX'))
-    markup.add(types.InlineKeyboardButton('channel', url = 'https://telegram.me/powercelteam'))
     bot.send_message(m.chat.id, 'سلام خوش آمدید\ncommands : \n/git [username]\ndeveloper : @XxattackerxX', reply_markup=markup)
     print 'bot send help command'
 
