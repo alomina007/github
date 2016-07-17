@@ -35,7 +35,7 @@ def gif(m):
         avatar_url = json_data['avatar_url']
         urllib.urlretrieve("{}".format(avatar_url), "git.png")
         bot.send_sticker(m.chat.id, open('git.png'))
-        bot.send_message(m.chat.id, 'Name : <b>{}</b>\nType : <b>{}</b>\nCompany : <b>{}</b>\nblog : <code>{}</code>\nlocation : <b>{}</b>\nbio : <i>{}</i>\n\nUrl : <code>{}</code>\nfollowers : <code>{}</code>\nfollowing : <code>{}</code>\nRepos : <code>{}</code>\n\________________ \n@powercelteam'.format(name,typee,company,blog,location,bio,url_html,followers,following,public_repos), parse_mode='HTML')
+        bot.send_message(m.chat.id, 'Name : <b>{}</b>\nType : <b>{}</b>\nCompany : <b>{}</b>\nblog : <code>{}</code>\nlocation : <b>{}</b>\nbio : <i>{}</i>\n\nUrl : <code>{}</code>\nfollowers : <code>{}</code>\nfollowing : <code>{}</code>\nRepos : <code>{}</code>\n@powercelteam'.format(name,typee,company,blog,location,bio,url_html,followers,following,public_repos), parse_mode='HTML')
         print 'bot send git command'
     if 'message' in json_data:
         bot.send_message(m.chat.id, 'Error \n/git [username]')
