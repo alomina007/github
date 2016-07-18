@@ -7,13 +7,13 @@ import sys
 reload(sys)
 sys.setdefaultencoding("utf-8")
 
-bot = telebot.TeleBot('181569628:AAExwiEQLk4SJ2fVM3u10veOaxJa3OcToZ8') # makan token shoma
+bot = telebot.TeleBot('') # makan token shoma
 
 @bot.message_handler(commands=['start', 'help'])
 def m(m):
     markup = types.InlineKeyboardMarkup()
-    markup.add(types.InlineKeyboardButton('developer', url = 'https://telegram.me/XxattackerxX'))
-    bot.send_message(m.chat.id, 'Hi Welcome \ncommands : \n/git [username]\n\ndeveloper : @XxattackerxX', reply_markup=markup)
+    markup.add(types.InlineKeyboardButton('کانال ما', url = 'https://telegram.me/SuDo_Tm'))
+    bot.send_message(m.chat.id, 'Hi Welcome \ncommands : \n/git [username]\n\ndeveloper :SuDo™', reply_markup=markup)
     print 'bot send help command'
 
 @bot.message_handler(regexp='^(/git) (.*)')
@@ -64,10 +64,3 @@ def qq(q):
         bot.answer_inline_query(q.id, [gitss, avatarr], cache_time=1)
 
 bot.polling(True)
-# _____           _              _____
-#|_   _|_ _ _   _| | ___  _ __  |_   _|__  __ _ _ __ ___
-#  | |/ _` | | | | |/ _ \| '__|   | |/ _ \/ _` | '_ ` _ \
-#  | | (_| | |_| | | (_) | |      | |  __/ (_| | | | | | |
-#  |_|\__,_|\__, |_|\___/|_|      |_|\___|\__,_|_| |_| |_|
-#           |___/
-#Copy right  2016 Negative - Taylor Team
