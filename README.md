@@ -1,4 +1,5 @@
 <b>آموزش نصب</b>
+
 sudo apt-get update
 
 sudo apt-get install python2.7
